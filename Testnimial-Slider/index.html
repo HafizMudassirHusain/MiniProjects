@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testinomial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .carousel {
+            background: rgb(0, 0, 0);
+            height: 600px;
+            perspective: 250px;
+        }
+
+        .carousel .carousel-item {
+            width: 450px;
+            background: white;
+            padding: 50px;
+            height: auto;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .img-area {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 50%;
+            border: inset 8px rgb(0, 170, 255);
+        }
+
+        .img-area img {
+            width: 100%;
+        }
+
+        .test1 p {
+            color: #262626;
+            font-size: 18px;
+            line-height: 1.3;
+        }
+
+        .test1 h4 {
+            font-size: 20px;
+            margin: 0;
+            color: #000000;
+        }
+
+        .test1 h5 {
+            font-size: 14px;
+            letter-spacing: 5px;
+            margin: 7px 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="carousel">
+        <h1 style="color: white;text-align: center;margin-top: 10px;">Testinomial</h1>
+        <a class="carousel-item" href="#">
+            <div class="test1">
+                <div class="img-area">
+                    <img src="https://assets-global.website-files.com/636b968ac38dd1495ec4edcd/63c97bbbdeecd68494958b5d_manga-character_AI%20Avatar%20Dyvo.webp"
+                        alt="">
+                </div>
+                <p>" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo itaque repellat dolore in sed
+                    voluptas eum, totam tempore adipisci temporibus, "</p>
+                <h4>Muhammad Adeel</h4>
+                <h5>web-designer</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="test1">
+                <div class="img-area">
+                    <img src="https://assets-global.website-files.com/636b968ac38dd1495ec4edcd/63c97bbbdeecd68494958b5d_manga-character_AI%20Avatar%20Dyvo.webp"
+                        alt="">
+                </div>
+                <p>" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo itaque repellat dolore in sed
+                    voluptas eum, totam tempore adipisci temporibus"</p>
+                <h4>Muhammad Adeel</h4>
+                <h5>web-designer</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="test1">
+                <div class="img-area">
+                    <img src="https://assets-global.website-files.com/636b968ac38dd1495ec4edcd/63c97bbbdeecd68494958b5d_manga-character_AI%20Avatar%20Dyvo.webp"
+                        alt="">
+                </div>
+                <p>" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo itaque repellat dolore in sed
+                    voluptas eum, totam tempore adipisci temporibus,"</p>
+                <h4>Muhammad Adeel</h4>
+                <h5>web-designer</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="test1">
+                <div class="img-area">
+                    <img src="https://assets-global.website-files.com/636b968ac38dd1495ec4edcd/63c97bbbdeecd68494958b5d_manga-character_AI%20Avatar%20Dyvo.webp"
+                        alt="">
+                </div>
+                <p>" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo itaque repellat dolore in sed
+                    voluptas eum, totam tempore adipisci temporibus,"</p>
+                <h4>Muhammad Adeel</h4>
+                <h5>web-designer</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="test1">
+                <div class="img-area">
+                    <img src="https://s.yimg.com/ny/api/res/1.2/JvVHrJiqfOlycjuSjD9H1g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/buzzfeed_articles_778/46ef488b8d199eb54a82996398204209"
+                        alt="">
+                </div>
+                <p>" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo itaque repellat dolore in sed
+                    voluptas eum, totam tempore adipisci temporibus,"</p>
+                <h4>Muhammad Adeel</h4>
+                <h5>web-designer</h5>
+            </div>
+        </a>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                padding: 200,
+
+            });
+            autoplay();
+            function autoplay() {
+                $(".carousel").carousel("next");
+                setTimeout(autoplay, 4500);
+            }
+        });
+    </script>
+</body>
+
+</html>
