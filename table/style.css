@@ -1,0 +1,58 @@
+div{
+width: 70%;
+height: 550px;
+background-color: rgb(37, 35, 35);
+border-radius: 10px;
+margin: auto;
+}
+h1{
+    width: 50%;
+    height: 50px;
+    font-size: 40px;
+    padding: 20px;
+    margin: auto;
+    color: white;
+}
+
+th,td{
+width: 25%;
+text-align: center;
+border: 1px solid white;
+color:antiquewhite ;
+}
+.white{
+    background-color: aliceblue;
+    color: black;
+}
+.yellow{
+    background-color: rgb(240, 145, 28);
+}
+.sky{
+    background-color: rgb(36, 187, 238);
+}
+.red{
+    background-color: rgb(194, 54, 26);
+}
+i{
+color: rgb(224, 246, 28);
+font-weight: bolder;
+}
+table{
+    width: 90%;
+    height: 80%;
+    border: 1px solid white;
+    
+    border-collapse:collapse; 
+}
+.futu,.hard,.gen{
+width: 90%;
+height: 70%;
+background-color: brown;
+color: aliceblue;
+font-size: 15px;
+border: 1px solid brown;
+border-radius: 20px;
+}
+.gen{
+    height: 50%;
+}

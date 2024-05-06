@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red-TRAN-Nav</title>
+    <style>
+        body .trans-red{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: black;
+}
+.navred{
+    position: relative;
+    width: 550;
+    height: 50px;
+    background: rgb(39, 34, 34);
+    border-radius:8px ;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.navred a{
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding:0 27px;
+ z-index: 1;
+}
+.navred span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919,#ff3333);
+    border-radius: 8px; 
+    transition: .5s;
+}
+.navred a:nth-child(1):hover~span{
+    left: 400px;
+}
+.navred a:nth-child(2):hover~span{
+    left: 495px;
+}
+.navred a:nth-child(3):hover~span{
+    left: 590px;
+}
+.navred a:nth-child(4):hover~span{
+    left: 685px;
+}
+.navred a:nth-child(5):hover~span{
+    left: 778px;
+}
+    </style>
+</head>
+<body>
+    <div class="trans-red">
+        <nav class="navred">
+            <a href="">home</a>
+            <a href="">search</a>
+            <a href="">services</a>
+            <a href="">blog</a>
+            <a href="">contact</a>
+            <span></span>
+        </nav>
+        </div> 
+
+
+
+</body>
+</html>

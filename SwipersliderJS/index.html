@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Open Sans', sans-serif;
+}
+
+.swpslide{
+ position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background:#2196f3;
+overflow: hidden;
+    }
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+      filter: blur(2px);
+      background: #d1ebff;
+      border-radius: 10px;
+    }
+    .swiper-slide-active{
+      filter: blur(0px);
+      background: #fff;
+    }
+    .swiper-slide .testinomial {
+      display: block;
+      width: 100%;
+    }
+    .testinomial .content .details img{
+        /* max-height:200px;
+        object-fit:cover; */
+        display: block;
+      width: 100%;
+    }
+    .testinomial{
+        position: relative;
+        width: 100%;
+        padding: 40px;
+        padding-top: 80px;
+        color: #999;
+    }
+    .testinomial .details{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .testinomial .details .imgbx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius:50% ;
+    overflow: hidden;
+    margin-right: 10px;
+    }
+    .testinomial .details .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    .testinomial .details h2{
+   font-size: 15px;
+   font-weight: 400;
+   letter-spacing: 1px;
+   color: #2196f2;
+   line-height: 1.1em;
+    }
+    .testinomial .details h2 span{
+      font-size: 12px;
+      color: #666;
+    }
+
+    .swiper-3d .swiper-slide-shadow-left {
+    background-image: none;
+    }
+    .swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <section class="swpslide">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="testinomial">
+            <div class="content">
+                <p><q>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                    sit amet consectetur adipisicing elit. Quasi iste, deleniti invent </q> </p>
+              <div class="details">
+                      <div class="imgbx">
+                        <img src="https://img.freepik.com/premium-photo/cartoon-character-with-glasses-hoodie-that-says-girl-is-wearing-hoodie_784625-9676.jpg" alt="" class="imgbx">
+                      </div>
+                    <h2>Snoze famous <br><span>Creative designer</span></h2>
+                      </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testinomial">
+            <div class="content">
+                <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                    sit amet consectetur adipisicing elit. Quasi iste, deleniti invent</p>
+                       <div class="details">
+                      <div class="imgbx">
+                        <img src="https://img.freepik.com/premium-photo/cartoon-character-with-glasses-hoodie-that-says-girl-is-wearing-hoodie_784625-9676.jpg" alt="" class="imgbx">
+                      </div>
+                    <h2>Snoze famous <br><span>Creative designer</span></h2>
+                      </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testinomial">
+            <div class="content">
+                <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                    sit amet consectetur adipisicing elit. Quasi iste, deleniti invent</p>
+                       <div class="details">
+                      <div class="imgbx">
+                        <img src="https://img.freepik.com/premium-photo/cartoon-character-with-glasses-hoodie-that-says-girl-is-wearing-hoodie_784625-9676.jpg" alt="" class="imgbx">
+                      </div>
+                    <h2>Snoze famous <br><span>Creative designer</span></h2>
+                      </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testinomial">
+            <div class="content">
+                <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                    sit amet consectetur adipisicing elit. Quasi iste, deleniti invent</p>
+                       <div class="details">
+                      <div class="imgbx">
+                        <img src="https://img.freepik.com/premium-photo/cartoon-character-with-glasses-hoodie-that-says-girl-is-wearing-hoodie_784625-9676.jpg" alt="" class="imgbx">
+                      </div>
+                    <h2>Snoze famous <br><span>Creative designer</span></h2>
+                      </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testinomial">
+            <div class="content">
+                <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                    sit amet consectetur adipisicing elit. Quasi iste, deleniti invent</p>
+                       <div class="details">
+                      <div class="imgbx">
+                        <img src="https://img.freepik.com/premium-photo/cartoon-character-with-glasses-hoodie-that-says-girl-is-wearing-hoodie_784625-9676.jpg" alt="" class="imgbx">
+                      </div>
+                    <h2>Snoze famous <br><span>Creative designer</span></h2>
+                      </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      loop: true,
+      // pagination: {
+      //   el: ".swiper-pagination",
+      // },
+    });
+  </script>
+</body>
+
+</html>

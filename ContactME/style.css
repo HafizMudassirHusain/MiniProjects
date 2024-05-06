@@ -1,0 +1,77 @@
+section *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.section-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f242d;
+}
+.contact h2{
+    font-size: 40px;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contact form{
+    width: 600px;
+    text-align: center;
+}
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+.field .item{
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid rgb(0, 98, 255);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: aliceblue;
+    margin: 12px 0;
+}
+.field.error .item{
+border-color:#d93025 ;
+}
+.field .item::placeholder{
+color: rgb(184, 181, 181);
+}
+.field .error-txt{
+font-size: 14.5px;
+color: red;
+text-align: left;
+margin: -5px 0 10px;
+display: none;
+}
+.field.error .error-txt{
+    /* margin-top: -10px; */
+display: block;
+}
+
+form textarea .field .item{
+    color: rgba(255.255,255,.4);
+    }
+form .textarea-feild .item{
+    resize: none;
+}
+form button{
+    padding: 12px 12px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius:6px;
+    box-shadow: 0 0 6px #0ef;
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s;
+}
