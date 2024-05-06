@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+          .main {
+            width: 90%;
+            font-family: Arial, sans-serif;
+            margin: auto;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+            height: 50vh;
+            background-color: #127ec0;
+            flex-wrap: wrap;
+
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.5);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(180, 176, 176, 0.7);
+            transition: top 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        .card-overlay .overlay-content{
+            color: rgb(255, 255, 255);
+        }
+        .card:hover .card-overlay {
+            top: 0;
+        }
+
+        .overlay-content i {
+            color: white;
+            margin-right: 10px;
+        }
+
+        .expanded-image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none; /* Initially hidden */
+            justify-content: center;
+            z-index: 1;
+            align-items: center;
+        }
+
+        .expanded-image {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+        }
+    </style>
+    <title>Card with Image and Text/Link Icons</title>
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*8BtlgpxyjOPaLZXO6pVD0Q.jpeg" alt="Project Image">
+            <div class="card-overlay">
+                <a href="https://www.netflix.com" target="_blank" class="overlay-content"><i class="fas fa-external-link-alt"></i>View Project</a>
+                <i class="fas fa-expand overlay-content" onclick="expandImage('https://miro.medium.com/v2/resize:fit:1400/1*8BtlgpxyjOPaLZXO6pVD0Q.jpeg')"></i>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*8BtlgpxyjOPaLZXO6pVD0Q.jpeg" alt="Project Image">
+            <div class="card-overlay">
+                <a href="https://www.netflix.com" target="_blank" class="overlay-content"><i class="fas fa-external-link-alt"></i>View Project</a>
+                <i class="fas fa-expand overlay-content" onclick="expandImage('https://miro.medium.com/v2/resize:fit:1400/1*8BtlgpxyjOPaLZXO6pVD0Q.jpeg')"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*8BtlgpxyjOPaLZXO6pVD0Q.jpeg" alt="Project Image">
+            <div class="card-overlay">
+                <a href="https://www.netflix.com" target="_blank" class="overlay-content"><i class="fas fa-external-link-alt"></i>View Project</a>
+                <i class="fas fa-expand overlay-content" onclick="expandImage('https://miro.medium.com/v2/resize:fit:1400/1*8BtlgpxyjOPaLZXO6pVD0Q.jpeg')"></i>
+            </div>
+        </div>    
+    
+    <div class="card">
+            <img src="https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg" alt="Project Image">
+            <div class="card-overlay">
+                <a href="https://www.netflix.com" target="_blank" class="overlay-content"><i class="fas fa-external-link-alt"></i>View Project</a>
+                <i class="fas fa-expand overlay-content" onclick="expandImage('https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg')"></i>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img src="https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg" alt="Project Image">
+            <div class="card-overlay">
+                <a href="https://www.netflix.com" target="_blank" class="overlay-content"><i class="fas fa-external-link-alt"></i>View Project</a>
+                <i class="fas fa-expand overlay-content" onclick="expandImage('https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg')"></i>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg" alt="Project Image">
+            <div class="card-overlay">
+                <a href="https://www.netflix.com" target="_blank" class="overlay-content"><i class="fas fa-external-link-alt"></i>View Project</a>
+                <i class="fas fa-expand overlay-content" onclick="expandImage('https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg')"></i>
+            </div>
+        </div>
+    
+    
+    
+        <!-- Add more cards as needed -->
+    
+        <div class="expanded-image-container" onclick="closeExpandedImage()">
+            <img class="expanded-image" src="" alt="Expanded Project Image">
+            <i class="fas fa-times close-icon"></i>
+        </div>
+    </div>    
+    <script>
+        function expandImage(imageUrl) {
+            var expandedImage = document.querySelector('.expanded-image');
+            expandedImage.src = imageUrl;
+            document.querySelector('.expanded-image-container').style.display = 'flex';
+        }
+
+        function closeExpandedImage() {
+            document.querySelector('.expanded-image-container').style.display = 'none';
+        }
+    </script>   
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover transition upword and downword cards effect</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-...your-integrity-code-here..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    
+.skills{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    box-shadow:inset 0px -10px 50px #0d6cf1;
+  }
+  .container {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #171616;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .container .card .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1b1a1a;
+  /* border-radius: 10px; */
+  } 
+  .container .card:hover .icon {background-color: hsl(216, 74%, 52%);}
+  .container .card .icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: #494949;
+  }  
+  .container .card:hover .icon .fa {color: rgb(255, 255, 255);}
+  .container .card .slide {
+  width: 300px;
+  background-color: rgb(42, 41, 41);/* backup slider behind the icon*/
+  height: 200px;
+  transition: 0.5s;
+  }
+  .container .card .slide.slide1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: .7s;
+  transform: translateY(100px);
+  }
+  .container .card:hover .slide.slide1{
+  transform: translateY(0px);
+  }
+  .container .card .slide.slide2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: .8s;
+  transform: translateY(-100px);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
+  }
+  .container .card:hover .slide.slide2{
+  transform: translateY(0);
+  }
+  .container .card .slide.slide2::after{
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  bottom: 15px;
+  left: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c73df;
+  }
+  .container .card .slide.slide2 .content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #125be3;
+  }
+  .container .card .slide.slide2 .content h3 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color:  #125be3;
+  } 
+</style>
+
+</head>
+<body>
+    <section class="skills">
+        <div class="container">
+          <div class="card">
+              <div class="slide slide1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-brands fa-python"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="slide slide2">
+                  <div class="content">
+                      <h3>
+                          Hello there!
+                      </h3>
+                      <p>Trust yourself and keep going.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="slide slide1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-brands fa-java"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="slide slide2">
+                  <div class="content">
+                      <h3>
+                          Hello there!
+                      </h3>
+                      <p>Trust yourself and keep going.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="slide slide1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-brands fa-react"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="slide slide2">
+                  <div class="content">
+                      <h3>
+                          Hello there!
+                      </h3>
+                      <p>Trust yourself and keep going.</p>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="card">
+              <div class="slide slide1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-brands fa-node"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="slide slide2">
+                  <div class="content">
+                      <h3>
+                          Hello there!
+                      </h3>
+                      <p>Trust yourself and keep going.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="slide slide1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-brands fa-js"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="slide slide2">
+                  <div class="content">
+                      <h3>
+                          Hello there!
+                      </h3>
+                      <p>Trust yourself and keep going.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div class="slide slide1">
+                  <div class="content">
+                      <div class="icon">
+                          <i class="fa fa-solid fa-code"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="slide slide2">
+                  <div class="content">
+                      <h3>
+                          Hello there!
+                      </h3>
+                      <p>Trust yourself and keep going.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </section>  
+</body>
+</html>-->
+
+
+
+
+
+
+
+
+
+ 
