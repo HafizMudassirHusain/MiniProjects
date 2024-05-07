@@ -68,9 +68,9 @@ function sendEmail() {
     const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Subject: ${subject.value}<br> Message: ${message.value}<br>`;
 
     Email.send({
-        SecureToken : "cc5b16e1-4cf5-4391-9286-da529c592342",
-        To: 'hmudassir511@gmail.com',
-        From: "hmudassir511@gmail.com",
+        SecureToken : "-----------------",// add ypur own secure tokken from elastic email.js
+        To: '----------------',///add your own email
+        From: "--------------------", ///add your own email
         Subject: subject.value,
         Body: bodyMessage
     }).then(

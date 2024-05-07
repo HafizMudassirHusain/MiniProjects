@@ -1,9 +1,4 @@
 
-/* * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} */
 .header{
   margin: auto ;
   position: fixed;
@@ -265,12 +260,6 @@ border-radius: 50%;
   color: white;
   background-color: #0d61f1;
 }
-/* .innersection:hover h1,
-.innersection:hover .line,
-.innersection:hover p {
-color: #ffffff;
-transition: 2s;
-} */
 .innersection:hover .line{ 
 background-color:#ffffff ;
 }
