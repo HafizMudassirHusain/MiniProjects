@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>/* Basic reset for margin and padding */
+   /* Basic reset for margin and padding */
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+.navbar-links {
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.navbar-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #ff6347; /* Tomato color */
+}
+
+.navbar-links.active {
+    top: 50px;
+    right: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
+}
+
+/* Animation for the toggle button */
+.toggle-button.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle-button.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-button.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+        </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand-title">Brand</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+    </div>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.toggle-button');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+        toggleButton.classList.toggle('active');
+    });
+});
+
+
+
+    </script>
+</body>
+</html>

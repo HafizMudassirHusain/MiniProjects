@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://c1.wallpaperflare.com/preview/287/756/864/board-conductors-circuits-calculator.jpg'); /* Replace 'background.jpg' with your image path */
+  background-size: cover;
+  filter: blur(5px);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.date-input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.calculate-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calculate-btn:hover {
+  background-color: #45a049;
+}
+
+.progress-container {
+  position: relative;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #4CAF50;
+  border-top-color: transparent;
+  animation: progress-animation 1s infinite linear;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="background-image"></div>
+    <div class="content">
+      <h1>Age Calculator</h1>
+      <div class="input-container">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" class="date-input">
+      </div>
+      <button id="calculate-btn" class="calculate-btn">Calculate Age</button>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-label" id="progress-label">0%</div>
+      </div>
+    </div>
+  </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const calculateBtn = document.getElementById("calculate-btn");
+  const progressBar = document.getElementById("progress-bar");
+  const progressLabel = document.getElementById("progress-label");
+
+  calculateBtn.addEventListener("click", function() {
+    const dobInput = document.getElementById("dob").value;
+    const dobDate = new Date(dobInput);
+    const today = new Date();
+
+    const ageInMilliseconds = today - dobDate;
+    const ageInMillisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25; // Average milliseconds per year (considering leap years)
+    const totalAge = ageInMilliseconds / ageInMillisecondsPerYear;
+    const agePercentage = (totalAge / 120) * 100; // Adjusted for a full circle (120% instead of 100%)
+
+    progressBar.style.strokeDasharray = `${agePercentage}, 100`;
+    progressLabel.textContent = `${Math.round(totalAge)} years`;
+  });
+});
+  </script>
+</body>
+</html>
+
+

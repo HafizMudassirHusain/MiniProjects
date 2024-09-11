@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="weather-container">
+            <h1 class="app-title">Weather App</h1>
+           <!-- ====================== -->
+            <div id="alerts" class="weather-alerts"></div>
+            <!-- ==================== -->
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-button">Search</button>
+            </div>
+            <!-- ==================== -->
+            <button id="unit-toggle">Switch to °F</button>
+            <!-- ============== -->
+            <div id="weather" class="weather-info">
+                <div id="location" class="weather-location"></div>
+                <div class="weather-current">
+                    <img id="icon" class="weather-icon" src="" alt="">
+                    <div id="temperature" class="weather-temperature"></div>
+                </div>
+                <div id="description" class="weather-description"></div>
+                <div id="forecast" class="weather-forecast"></div>
+                <div id="map" class="weather-map"></div>
+            </div>
+        </div>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlgvnBbtZSTsIPsdMzUDvyUhT9tKJe7l4&callback=initMap"></script>
+    <script src="app.js"></script>
+</body>
+</html>
